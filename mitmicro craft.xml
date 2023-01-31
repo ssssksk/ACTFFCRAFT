@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilter="32640" Id="210f0db0-2159-4d5a-ba02-f32e62359c29" Name="多宏生产自动印钞" Enabled="true">
+    <Folders>
+      <Folder Id="0bb56341-57ce-4876-8c6a-539cd9e24414" Name="自动持续制作" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="false" Name="说明: 默认第一个宏绑定F11，第二个宏绑定F12" Id="a490f2ba-000b-4783-a6b2-f0729b98c468" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="说明: 生产宏要以/e Craft finished结束" Id="c50b048e-11e4-4cd0-a054-120942cee702" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="说明: 请确认聊天栏开始制作的日志没有关掉" Id="a9909cb8-64d1-4dce-a100-248371f70cac" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="自动制作1" Id="17076114-808b-4428-b23c-dd38156926e4" RegularExpression="^.{14} ChatLog 00:0842::.*开始制作“.*”">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="crafting" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="122" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="1000" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="自动开始" Id="c7aab3f4-afc4-4f08-95d0-3d1e9edd62fc" RegularExpression="^.{14} ChatLog 00:0038::Craft2 finished" DebugLevel="Verbose">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="crafting" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="自动制作2" Id="6c667290-2639-4106-af1f-1ac631ac9269" RegularExpression="^.{14} ChatLog 00:0038::Craft1 finished">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="crafting" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="123" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="50" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="《-按键对应代码-》" Id="c0e6c5e4-d15b-41f7-93a0-8511c1b68856" RegularExpression="（-双击看描述，点下面的描述-）" Description="键码值(keyCode)&#xD;&#xA;A:65 B:66 C:67 D:68 E:69 F:70 G:71 H:72 I:73 J:74 K:75 L:76 M:77&#xD;&#xA;N:78 O:79 P:80 Q:81 R:82 S:83 T:84 U:85 V:86 W:87 X:88 Y:89 Z:90&#xD;&#xA;大键盘上的数字&#xD;&#xA;0:48 1:49 2:50 3:51 4:52 5:53 6:54 7:55 8:56 9:57&#xD;&#xA;小键盘上的数字&#xD;&#xA;0:96 1:97 2:98 3:99 4:100 5:101 6:102 7:103 8:104 9:105&#xD;&#xA;F1-F12&#xD;&#xA;F1:112 F2:113 F3:114 F4:115 F5:116 F6:117 F7:118 F8:l119 F9:120 F10:121 F11:122 F12:123&#xD;&#xA;&#xD;&#xA;">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="SystemBeep" Description="！请点击右上角的描述查看详细说明↗！" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="SystemBeep" Description="！请点击右上角的描述查看详细说明↗！" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="SystemBeep" Description="！请点击右上角的描述查看详细说明↗！" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="SystemBeep" Description="！请点击右上角的描述查看详细说明↗！" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="SystemBeep" Description="！请点击右上角的描述查看详细说明↗！" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="说明: 修改按键说明，不使用时记得关闭" Id="1a0d0455-58f9-4e36-810a-de885179c894" RegularExpression="" Description="只需要修改自动制作1和自动自作2内的keycode后的数字">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="说明:只有一个宏的时候无法使用" Id="6e39cfdb-4d0d-4a88-ad22-77ed99cdcb3e" RegularExpression="" Description="只需要修改自动制作1和自动自作2内的keycode后的数字">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="false" Name="说明: 稍微修改了点獭爹的触发器" Id="37c1e777-6f41-4dc2-8bad-aef9e8002582" RegularExpression="">
+        <Actions />
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="false" Name="说明: 请维持网络延迟稳定并取消后台限制帧数" Id="a9c22e00-6922-4b6f-af0b-a9d63542f902" RegularExpression="">
+        <Actions />
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
